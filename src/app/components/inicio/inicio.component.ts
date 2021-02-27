@@ -11,9 +11,17 @@ export class InicioComponent implements OnInit {
 
   peso = 60;
 
+  altura=170;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiarAltura(event: any){
+
+    this.altura = event.target.value;
+
   }
 
 }
