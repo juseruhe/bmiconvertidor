@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -13,7 +14,7 @@ export class InicioComponent implements OnInit {
 
   altura=170;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,6 +22,12 @@ export class InicioComponent implements OnInit {
   cambiarAltura(event: any){
 
     this.altura = event.target.value;
+
+  }
+
+  calcularBMI(){
+
+    this.router.navigate(['/resultado'])
 
   }
 
