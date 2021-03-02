@@ -27,7 +27,10 @@ export class InicioComponent implements OnInit {
 
   calcularBMI(){
 
-    this.router.navigate(['/resultado'])
+    const bmi = this.peso / Math.pow(this.altura/100,2);
+    console.log(bmi.toFixed(1))
+
+    this.router.navigate(['/resultado',bmi.toFixed(1)])
 
   }
 
