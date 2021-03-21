@@ -32,6 +32,8 @@ export class InicioComponent implements OnInit {
 
     this.router.navigate(['/resultado',bmi.toFixed(1)])
 
+    //   peso / (altura/100)²
+
   }
 
 }
